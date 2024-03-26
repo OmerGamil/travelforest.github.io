@@ -1,0 +1,59 @@
+@keyframes intro-content {
+    0% {opacity: 0;}       
+    100% {opacity: 1;}
+}
+
+@keyframes intro-header {
+    0% {transform: translatey(40px) scale(.6);}
+    100% {transform: translate(0) scale(1);}
+}    
+    
+#bg {
+    background-image: url(get-img('bg.jpg'));
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    position: fixed;
+}
+
+#landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    height: 100vh;
+    color: white;
+    transition: all .4s;
+    position: relative;
+    z-index: 11;
+
+    animation: intro-content 1.4s .1s both;
+
+    h1{
+        font-size: px-to-rem(48px);
+        margin-bottom: px-to-rem(16px);
+
+        animation: intro-header 1s .1s;
+    }
+
+    p {
+        width: 36vw;
+        text-align: center;
+        line-height: 190%;
+    }
+
+    button {
+        color: #425831;
+        background-color: white;
+        padding: .6em 4.2em;
+        border-radius: 4px;
+        margin-top: px-to-rem(14px);
+
+        &:hover {
+            opacity: .8;
+        }    
+    }
+}
